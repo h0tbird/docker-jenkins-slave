@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 #------------------------------------------------------------------------------
 # Install SSL certificates:
 #------------------------------------------------------------------------------
@@ -44,8 +42,4 @@ set -x
 # Run:
 #------------------------------------------------------------------------------
 
-export MESOS_CONTAINER_NAME=${MESOS_CONTAINER_NAME}
-export MESOS_SANDBOX=${MESOS_SANDBOX}
-
-echo "Now running: ${*:2}"
 exec /bin/bash -c "${*:2}"
