@@ -52,5 +52,6 @@ echo "b: ${*:2}"
 echo "c: ${@:1}"
 echo "d: ${@:2}"
 
+ls -la ${MESOS_SANDBOX-.}
 echo "Now running: ${*:2}"
 exec ${*:2}
