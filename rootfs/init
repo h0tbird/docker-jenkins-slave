@@ -47,4 +47,4 @@ export
 
 ls $MESOS_SANDBOX
 echo "Now running: $*"
-exec $*
+exec $@
