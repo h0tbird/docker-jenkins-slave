@@ -48,5 +48,5 @@ export
 ls $MESOS_SANDBOX
 
 echo "I am: $0"
-echo "Now running: $*"
-exec $@
+echo "Now running: $@"
+exec bash -c "$@"
