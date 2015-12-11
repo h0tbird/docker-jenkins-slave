@@ -47,6 +47,5 @@ set -x
 export MESOS_CONTAINER_NAME=${MESOS_CONTAINER_NAME}
 export MESOS_SANDBOX=${MESOS_SANDBOX}
 
-ls -la ${MESOS_SANDBOX-.}
 echo "Now running: ${*:2}"
-exec ${*:2}
+exec /bin/bash -c "${*:2}"
