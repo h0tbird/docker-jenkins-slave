@@ -42,4 +42,7 @@
 # Run:
 #------------------------------------------------------------------------------
 
-MESOS_SANDBOX=${MESOS_SANDBOX} exec ${*:1}
+export MESOS_CONTAINER_NAME=${MESOS_CONTAINER_NAME}
+export MESOS_SANDBOX=${MESOS_SANDBOX}
+echo "Now running: ${*:1}"
+exec ${*:1}
