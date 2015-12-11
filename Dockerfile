@@ -16,5 +16,17 @@ RUN rpm --import http://mirror.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-
 # Install java:
 #------------------------------------------------------------------------------
 
-RUN yum install -y java-1.7.0-openjdk-headless java-1.7.0-openjdk-devel git && \
-    yum clean all
+RUN yum install -y java-1.7.0-openjdk-headless java-1.7.0-openjdk-devel \
+    openssl git && yum clean all
+
+#------------------------------------------------------------------------------
+# Populate root file system:
+#------------------------------------------------------------------------------
+
+ADD rootfs /
+
+#------------------------------------------------------------------------------
+# Entrypoint:
+#------------------------------------------------------------------------------
+
+ENTRYPOINT ["/init"]
