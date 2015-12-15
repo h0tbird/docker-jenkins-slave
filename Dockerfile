@@ -13,11 +13,13 @@ RUN rpm --import http://mirror.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-
     yum update -y && yum clean all
 
 #------------------------------------------------------------------------------
-# Install java:
+# Install java and tools:
 #------------------------------------------------------------------------------
 
 RUN yum install -y java-1.7.0-openjdk-headless java-1.7.0-openjdk-devel \
-    openssl git && yum clean all
+    openssl git && yum clean all && curl -o /usr/bin/jq \
+    https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 && \
+    chmod +x /usr/bin/jq
 
 #------------------------------------------------------------------------------
 # Populate root file system:
