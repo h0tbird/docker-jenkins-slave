@@ -1,6 +1,6 @@
-# docker-jenkins-slave
+# jenkins-slave
 
-[![Build Status](https://travis-ci.org/katosys/docker-jenkins-slave.svg?branch=master)](https://travis-ci.org/katosys/docker-jenkins-slave)
+[![Build Status](https://travis-ci.org/katosys/jenkins-slave.svg?branch=master)](https://travis-ci.org/katosys/jenkins-slave)
 
 Containerized jenkins slave server.
 
